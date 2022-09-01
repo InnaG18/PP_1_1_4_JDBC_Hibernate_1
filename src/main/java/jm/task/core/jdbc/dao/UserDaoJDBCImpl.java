@@ -24,7 +24,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             stat.executeUpdate(sql);
             System.out.println("Table was created!");
 
-        } catch (SQLException | ClassNotFoundException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
@@ -37,7 +37,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             stat.executeUpdate(sql);
             System.out.println("Table was dropped");
 
-        } catch (SQLException | ClassNotFoundException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
@@ -55,7 +55,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             preStat.executeUpdate();
             System.out.println("User was added!");
 
-        } catch (SQLException | ClassNotFoundException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
@@ -71,7 +71,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             preStat.executeUpdate();
             System.out.println("User was removed!");
 
-        } catch (SQLException | ClassNotFoundException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
@@ -95,7 +95,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
                 userList.add(user);
             }
             System.out.println("List of users is ready!");
-        } catch (SQLException | ClassNotFoundException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         return userList;
@@ -109,7 +109,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
             stat.executeUpdate(sql);
             System.out.println("Table was cleaned!");
 
-        } catch (SQLException | ClassNotFoundException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }

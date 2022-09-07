@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserServiceImpl  extends UserDaoJDBCImpl implements UserService {
+public class UserServiceImpl implements UserService {
     private  final UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
 
     public void createUsersTable() {
@@ -28,8 +28,6 @@ public class UserServiceImpl  extends UserDaoJDBCImpl implements UserService {
 
     public void removeUserById(long id) {
         userDaoHibernate.removeUserById(id);
-
-
     }
 
     public List<User> getAllUsers() {
